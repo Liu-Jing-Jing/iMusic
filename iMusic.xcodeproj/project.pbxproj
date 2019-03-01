@@ -37,13 +37,13 @@
 		C5279CFB22293FD700D1F0E0 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = C5279CF722293FD700D1F0E0 /* MBProgressHUD+MJ.m */; };
 		C5279CFC22293FD700D1F0E0 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C5279CF822293FD700D1F0E0 /* MBProgressHUD.bundle */; };
 		C5279CFD22293FD700D1F0E0 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = C5279CFA22293FD700D1F0E0 /* MBProgressHUD.m */; };
-		C5279D042229404200D1F0E0 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = C5279D002229404200D1F0E0 /* GDataXMLNode.m */; };
+		C5279D042229404200D1F0E0 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = C5279D002229404200D1F0E0 /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w"; }; };
 		C5279D052229404200D1F0E0 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = C5279D032229404200D1F0E0 /* UIView+Extension.m */; };
 		C5279D132229406600D1F0E0 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = C5279D092229406600D1F0E0 /* ioapi.c */; };
 		C5279D142229406600D1F0E0 /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = C5279D0B2229406600D1F0E0 /* mztools.c */; };
 		C5279D152229406600D1F0E0 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = C5279D0D2229406600D1F0E0 /* unzip.c */; };
 		C5279D162229406600D1F0E0 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = C5279D0F2229406600D1F0E0 /* zip.c */; };
-		C5279D172229406600D1F0E0 /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = C5279D122229406600D1F0E0 /* SSZipArchive.m */; };
+		C5279D172229406600D1F0E0 /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = C5279D122229406600D1F0E0 /* SSZipArchive.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		C5279D192229407200D1F0E0 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C5279D182229407200D1F0E0 /* libz.dylib */; };
 		C5279D1B222940A500D1F0E0 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C5279D1A222940A500D1F0E0 /* libxml2.dylib */; };
 		C5BDF0E622292917008EAA13 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5BDF0E522292917008EAA13 /* Foundation.framework */; };
@@ -675,8 +675,14 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iMusic/iMusic-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/include/libxml2,
+				);
 				INFOPLIST_FILE = "iMusic/iMusic-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -690,8 +696,14 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iMusic/iMusic-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/include/libxml2,
+				);
 				INFOPLIST_FILE = "iMusic/iMusic-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
