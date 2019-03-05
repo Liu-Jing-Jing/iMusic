@@ -13,4 +13,9 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+    #import "Classes/Common/Constant.h"
+// Color and height of the orange divider
+#define DIVIDER_COLOR [UIColor colorWithRed:255.0/255.0 green:149.0/255.0 blue:0.0 alpha:1.0];
+#define DIVIDER_HEIGHT 4.0
+#define BUTTON_SIZE CGSizeMake(72, 56)
 #endif

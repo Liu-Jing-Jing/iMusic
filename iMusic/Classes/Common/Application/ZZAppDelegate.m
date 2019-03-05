@@ -7,15 +7,24 @@
 //
 
 #import "ZZAppDelegate.h"
-
+#import "WBTabBarController.h"
 @implementation ZZAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = [[UIViewController alloc] init];
+
+    MKLog(@"%@", NSStringFromCGRect(self.window.bounds));
+//    let tabBarViewController = TabBarViewController(nibName: "TabBarViewController", bundle: nil)
+//    self.window.rootViewController = tabBarViewController
+    
+    [self.window setRootViewController:[[WBTabBarController alloc] init]  ];
+    [self.window setBackgroundColor:[UIColor whiteColor]];
     [self.window makeKeyAndVisible];
+    
+    
+
     return YES;
 }
 

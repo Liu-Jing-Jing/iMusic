@@ -1,0 +1,11 @@
+/* 
+  Microblog_Localization.strings
+  iMusic
+
+  Created by Mark Lewis on 19-3-5.
+  Copyright (c) 2019年 Tsinghua University. All rights reserved.
+*/
+homeVC_title="首页";
+discoverVC_title = "探索";
+messageVC_title = "消息";
+profileVC_title = "个人";
